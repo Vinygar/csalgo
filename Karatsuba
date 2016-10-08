@@ -1,0 +1,38 @@
+
+package karatsuba;
+
+/**
+ *
+ * @author mdygar
+ */
+import java.util.*;
+public class Karatsuba {
+
+    public static void main(String[] args) {
+        // TODO code application logic here
+        String x, y;
+        Scanner i= new Scanner(System.in);
+        System.out.println("Enter X: ");
+        x=i.nextLine();
+        System.out.println("Enter Y: ");
+        y=i.nextLine();
+       // System.out.println("X: "+x+"Y: ");
+       int a=Integer.parseInt(x.substring(0,2));
+        int b=Integer.parseInt(x.substring(2,4));
+        int c=Integer.parseInt(y.substring(0,2));
+        int d=Integer.parseInt(y.substring(2,4));
+        
+        int ac=a*c;
+        int ad= a*d;
+        int bc=b*c;
+        int bd=b*d;
+        //System.out.println("ac,ad,bc,bd: "+ac+" "+ad+" "+bc+" "+bd);
+        int answer; int answer1;
+        answer=ac*10000;
+        answer1=((ad+bc)*100);
+        int answer2=answer+answer1+bd;
+        System.out.println("Answer: "+answer2);
+        
+    }
+    
+}
